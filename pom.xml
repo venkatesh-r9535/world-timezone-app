@@ -28,7 +28,7 @@
 				<configuration>
 				<cloudHubDeployment>
 				<username>DCMuleTest</username>
-				<environment>SANDBOX</environment>
+				<environment>Sandbox</environment>
 				<workers>1</workers>
 				<workerType>Micro</workerType>
 				<applicationName>world-demo-api</applicationName>
