@@ -29,6 +29,7 @@
 				<cloudHubDeployment>
 				<username>DCMuleTest</username>
 				<environment>Sandbox</environment>
+				<businessGroup>Delivery Centric MulesoftDelivery Centric Mulesoft</businessGroup>
 				<workers>1</workers>
 				<workerType>Micro</workerType>
 				<applicationName>world-demo-api</applicationName>
