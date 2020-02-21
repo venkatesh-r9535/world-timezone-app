@@ -26,18 +26,27 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<uri>https://anypoint.mulesoft.com</uri>
-					<deploymentType>cloudhub</deploymentType>
-					<username>DCMuleTest</username>
-					<environment>Sandbox</environment>
-					<region>ap-southeast-2</region>
-					<applicationName>world-demo-api</applicationName>
-					<businessGroup>Delivery Centric Mulesoft</businessGroup>
-					<workers>1</workers>
-					<workerType>Micro</workerType>
-					<applicationName>world-demo-api</applicationName>
-					<password>DCMule@123</password>
-					<muleVersion>4.1.0</muleVersion>
+					<!-- <uri>https://anypoint.mulesoft.com</uri> <deploymentType>cloudhub</deploymentType> 
+						<username>DCMuleTest</username> <environment>Sandbox</environment> <region>ap-southeast-2</region> 
+						<applicationName>world-demo-api</applicationName> <businessGroup>Delivery 
+						Centric Mulesoft</businessGroup> <workers>1</workers> <workerType>Micro</workerType> 
+						<password>DCMule@123</password> <muleVersion>4.1.0</muleVersion> -->
+
+					<!-- CloudHub Deployment -->
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.2.2</muleVersion>
+						<username>DCMuleTest</username>
+						<password>DCMule@123</password>
+						<applicationName>world-demo-api</applicationName>
+						<environment>Sandbox</environment>
+						<properties>
+							<key>value</key>
+						</properties>
+					</cloudHubDeployment>
+
+
+
 				</configuration>
 				<executions>
 					<execution>
