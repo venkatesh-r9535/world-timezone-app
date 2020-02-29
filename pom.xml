@@ -17,7 +17,6 @@
 		<app.runtime>4.2.2</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -25,7 +24,16 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-			
+				
+				<!--******working standalone deployment configuration********** -->
+				<!-- <configuration>
+					<standaloneDeployment>
+							<muleVersion>${app.runtime}</muleVersion>
+							<muleHome>E:\mule-enterprise-standalone-4.2.2</muleHome>
+					</standaloneDeployment>
+				</configuration> -->
+				
+				<!--******working On-Premise server deployment in ARM configuration******** -->
 				<configuration>
 					<armDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
@@ -38,19 +46,25 @@
 						 <muleVersion>4.2.2</muleVersion>
 					</armDeployment>
 				</configuration> 
-
 				
-				
-				
-				<executions>
-					<execution>
-						<id>deploy</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-				</executions>
+				<!--******working cloud-hub server deployment in ARM configuration******** -->
+				 <!-- <configuration>
+	<cloudHubDeployment>
+	  <uri>https://anypoint.mulesoft.com</uri>
+	  <username>sangameshwarreddy31</username>
+	  <password>Sangameshwarreddy31</password>
+	  <applicationName>standal</applicationName>
+	  <muleVersion>4.2.1</muleVersion>
+	  <environment>Sandbox</environment>
+	  <properties>
+		<key>value</key>
+	  </properties>
+	</cloudHubDeployment>
+</configuration> -->
+				          
+			  
+	          <!--  <configuration></configuration> -->
+	          
 			</plugin>
 		</plugins>
 	</build>
