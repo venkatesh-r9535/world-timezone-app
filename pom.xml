@@ -25,7 +25,7 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
+				<!-- <configuration>
 					<!-- <uri>https://anypoint.mulesoft.com</uri> <deploymentType>cloudhub</deploymentType> 
 						<username>DCMuleTest</username> <environment>Sandbox</environment> <region>ap-southeast-2</region> 
 						<applicationName>world-demo-api</applicationName> <businessGroup>Delivery 
@@ -47,7 +47,25 @@
 
 
 
-				</configuration>
+				</configuration>-->
+				
+				
+				<configuration>
+					<armDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						  <username>Venkatesh_rangappa123</username>
+						  <password>Begood@123</password>
+						  <applicationName>${anypoint.applicationName}</applicationName>
+						  <target>server-node1</target>
+						  <targetType>server</targetType>
+						  <environment>Sandbox</environment>
+						 <muleVersion>4.2.2</muleVersion>
+					</armDeployment>
+				</configuration> 
+
+				
+				
+				
 				<executions>
 					<execution>
 						<id>deploy</id>
